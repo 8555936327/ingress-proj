@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: patient-service
-  namespace: microapp
+  name: appointment-service
+  namespace: microapp1
 spec:
   type: LoadBalancer
   selector:
-    app: patient
+    app: appointment
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000
+      targetPort: 3001
