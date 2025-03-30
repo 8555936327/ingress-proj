@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2025-03-27T12:19:45Z"
+  labels:
+    app: web
+  name: web
+  namespace: ns-2
+  resourceVersion: "105039"
+  uid: f3c679cc-4d18-4a90-9920-b4314b168e06
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.109.230.153
+  clusterIPs:
+  - 10.109.230.153
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: web
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+                                
